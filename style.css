@@ -22,7 +22,38 @@ body {
         radial-gradient(circle at 8% 10%, rgba(106, 240, 255, 0.22) 0, transparent 30%),
         radial-gradient(circle at 85% 15%, rgba(158, 125, 255, 0.2) 0, transparent 34%),
         linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+    background-size: 140% 140%;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    animation: gradient-shift 16s ease-in-out infinite alternate;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    top: -60px;
+    left: -90px;
+    background: var(--accent);
+    animation: float-orb-1 14s ease-in-out infinite;
+}
+
+body::after {
+    right: -90px;
+    bottom: -80px;
+    background: var(--accent-2);
+    animation: float-orb-2 17s ease-in-out infinite;
 }
 
 .navbar {
@@ -53,25 +84,58 @@ body {
 }
 
 .nav-links a {
+    position: relative;
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
     opacity: 0.9;
+    transition: color 0.25s ease, opacity 0.25s ease;
 }
 
 .nav-links a:hover {
     color: var(--accent);
+    opacity: 1;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+    transform: scaleX(1);
 }
 
 .hero-section {
     text-align: center;
     padding: 88px 20px 60px;
+    animation: fade-up 0.8s ease both;
 }
 
 .hero-section h1 {
     margin: 0 0 12px;
     font-size: clamp(2rem, 4.8vw, 3.8rem);
     line-height: 1.1;
+    color: #ffffff;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .hero-section h1 {
+        background: linear-gradient(120deg, #ffffff, #cde8ff 45%, #b6a0ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 }
 
 .hero-section p {
@@ -117,6 +181,8 @@ body {
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: fade-up 0.7s ease both;
 }
 
 h1, h2, h3 {
@@ -150,6 +216,31 @@ blockquote {
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 16px;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.015);
+    box-shadow: 0 14px 30px rgba(106, 240, 255, 0.18);
+}
+
+.card:hover,
+.project-section:hover,
+.hp-section:hover,
+.team-member:hover,
+.project-summary:hover,
+.achievements:hover {
+    transform: translateY(-4px);
+    border-color: rgba(106, 240, 255, 0.45);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+.grid .card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.grid .card:nth-child(3) {
+    animation-delay: 0.2s;
 }
 
 .stat {
@@ -165,6 +256,44 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradient-shift {
+    from {
+        background-position: 0% 40%;
+    }
+    to {
+        background-position: 100% 60%;
+    }
+}
+
+@keyframes float-orb-1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(36px, 22px);
+    }
+}
+
+@keyframes float-orb-2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-30px, -20px);
+    }
+}
+
 @media (max-width: 700px) {
     .navbar {
         flex-direction: column;
@@ -175,5 +304,32 @@ footer {
     .nav-links {
         flex-wrap: wrap;
         gap: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    body::before,
+    body::after,
+    .hero-section,
+    .card,
+    .project-section,
+    .hp-section,
+    .team-member,
+    .project-summary,
+    .achievements {
+        animation: none !important;
+    }
+
+    .hero-image,
+    .card,
+    .project-section,
+    .hp-section,
+    .team-member,
+    .project-summary,
+    .achievements,
+    .nav-links a,
+    .nav-links a::after {
+        transition: none !important;
     }
 }
