@@ -3,50 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - Our iGEM Project</title>
-    <link rel="stylesheet" href="style.css"> 
+    <meta name="description" content="Meet the interdisciplinary iGEM Aarhus RNA origami team across wet lab, dry lab, human practices, and communication tracks working in coordinated scientific iteration.">
+    <title>Team · iGEM Aarhus 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <nav class="navbar">
-        <div class="logo">🧬 iGEM Aarhus 2026 · RNA Origami</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="human-practices.html">Human Practices</a></li>
-        </ul>
-    </nav>
-
-    <main class="content-container">
-        <h2>Meet the Team</h2>
-        <p>We are an interdisciplinary team blending synthetic biology, computation, and design to make RNA origami practical and impactful.</p>
-        
-        <div class="team-member">
-            <h3>Team Structure</h3>
-            <ul>
-                <li><strong>Wet Lab:</strong> Build and characterize RNA folding constructs.</li>
-                <li><strong>Dry Lab:</strong> Simulate secondary structure and optimize sequences.</li>
-                <li><strong>Human Practices:</strong> Integrate stakeholder needs and ethics.</li>
-                <li><strong>Communication:</strong> Turn complex RNA design into clear stories.</li>
+        <div class="nav-inner">
+            <div class="logo">🧬 iGEM Aarhus 2026 · RNA Origami</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="human-practices.html">Human Practices</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="grid">
-            <article class="card">
-                <h3>What Drives Us</h3>
-                <p>We want biology to be engineered with the same elegance as architecture: form and function designed together.</p>
-            </article>
-            <article class="card">
-                <h3>What We’re Building</h3>
-                <p>A reusable RNA origami toolkit that future teams can adapt to new diagnostics and therapeutic challenges.</p>
-            </article>
-        </div>
+    <header class="page-header content-container" data-reveal>
+        <div class="badge">Interdisciplinary Team</div>
+        <h1 class="hero-title">One team, four coordinated tracks, one RNA origami mission.</h1>
+        <p>We combine wet-lab experimentation, computational design, human practices, and communication to build deployable RNA nanotechnology.</p>
+    </header>
+
+    <main class="content-container section-stack">
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Team Architecture</h2>
+                <p>Clear responsibilities with integrated decision loops.</p>
+            </div>
+            <div class="grid two-col">
+                <article class="card">
+                    <h3>Wet Lab</h3>
+                    <p>Build and characterize RNA constructs, validate folding quality, and benchmark experimental robustness.</p>
+                </article>
+                <article class="card">
+                    <h3>Dry Lab</h3>
+                    <p>Simulate RNA secondary structure, optimize sequences, and prioritize high-confidence design candidates.</p>
+                </article>
+                <article class="card">
+                    <h3>Human Practices</h3>
+                    <p>Translate stakeholder feedback into project criteria, ethics boundaries, and real-world relevance.</p>
+                </article>
+                <article class="card">
+                    <h3>Communication</h3>
+                    <p>Turn technical progress into clear narratives, visuals, and educational outreach artifacts.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Collaboration Principles</h2>
+                <p>Shared standards that keep science, engineering, and public engagement aligned.</p>
+            </div>
+            <div class="grid three-col">
+                <article class="card" data-reveal data-delay="1">
+                    <h3>Design with Evidence</h3>
+                    <p>Each design decision links to measurable data from modeling or experiments.</p>
+                </article>
+                <article class="card" data-reveal data-delay="2">
+                    <h3>Iterate Transparently</h3>
+                    <p>Weekly cross-track syncs ensure assumptions are challenged early and openly.</p>
+                </article>
+                <article class="card" data-reveal data-delay="3">
+                    <h3>Build for Reuse</h3>
+                    <p>Outputs are documented so future teams can extend methods with minimal onboarding overhead.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 iGEM Aarhus. Licensed under CC BY 4.0.</p>
     </footer>
-
 </body>
 </html>
