@@ -3,71 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our iGEM Project</title>
+    <title>iGEM Aarhus 2026 · RNA Origami</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <nav class="navbar">
-        <div class="logo">🧬 iGEM Aarhus 2026 · RNA Origami</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="human-practices.html">Human Practices</a></li>
-        </ul>
+        <div class="nav-inner">
+            <div class="logo">🧬 iGEM Aarhus 2026 · RNA Origami</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="human-practices.html">Human Practices</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="badge">Future of programmable biomaterials</div>
-        <h1>RNA Origami, but make it iconic.</h1>
-        <p>We fold RNA into nanoscale architectures that sense biology, carry function, and unlock next-generation synthetic systems.</p>
+    <header class="hero-section content-container" data-reveal>
+        <div class="badge">Futuristic RNA Lab</div>
+        <h1 class="hero-title">Engineering RNA Origami with scientific precision and iconic visual clarity.</h1>
+        <p>We design self-folding RNA architectures that combine structure, sensing, and function—turning sequence logic into programmable biological systems for diagnostics and therapeutics.</p>
+        <div class="button-row">
+            <a class="btn btn-primary" href="project.html">Explore the Project</a>
+            <a class="btn btn-secondary" href="human-practices.html">See Human Practices</a>
+        </div>
+
+        <div class="hero-meta">
+            <article class="meta-item" data-reveal data-delay="1">
+                <strong>3</strong>
+                Scaffold families planned for modular assembly.
+            </article>
+            <article class="meta-item" data-reveal data-delay="2">
+                <strong>10+</strong>
+                Iterative design cycles for fold stability and yield.
+            </article>
+            <article class="meta-item" data-reveal data-delay="3">
+                <strong>1</strong>
+                Integrated pipeline: model, build, test, and stakeholder loop.
+            </article>
+        </div>
     </header>
 
-    <main class="content-container">
-        <section class="project-summary">
-            <h2>Project Abstract</h2>
-            <p>Our project engineers RNA origami scaffolds that self-assemble inside cells and organize functional motifs with nanometer precision. By encoding fold logic directly in sequence design, we create modular RNA devices for biosensing, molecular imaging, and programmable therapeutic delivery.</p>
-            <img src="lab.jpg" alt="RNA origami team work in the lab" class="hero-image">
+    <main class="content-container section-stack">
+        <section class="panel grid two-col" data-reveal>
+            <div>
+                <div class="section-heading">
+                    <h2>Project Abstract</h2>
+                    <p>Our platform engineers single-stranded RNA to self-assemble into precise nanoscale geometries with programmable docking sites for biosensing, molecular imaging, and targeted response systems.</p>
+                </div>
+                <p>By combining computational folding design with iterative lab validation, we create reusable RNA components that can be adapted quickly for new biological contexts.</p>
+            </div>
+            <figure class="media-frame">
+                <img src="lab.jpg" alt="iGEM Aarhus team working in the RNA origami lab" loading="eager" decoding="async">
+            </figure>
         </section>
 
-        <section class="grid">
-            <article class="card">
-                <h2>Design Principle</h2>
-                <p>Single-stranded RNA folds into predefined shapes through internal base pairing, giving us compact structures with precise docking sites.</p>
-            </article>
-            <article class="card">
-                <h2>Why It’s Cool</h2>
-                <p>RNA origami combines information storage, structure, and dynamic function in one molecule—biology’s version of nanoscale engineering.</p>
-            </article>
-            <article class="card">
-                <h2>Goal This Season</h2>
-                <p>Build a robust design-to-validation pipeline that links computational folding, wet-lab expression, and fast structural readout.</p>
-            </article>
-        </section>
-
-        <section class="achievements">
-            <h2>2026 Mission Metrics</h2>
-            <div class="grid">
-                <article class="card">
-                    <div class="stat">3</div>
-                    <p>RNA scaffold families designed for modular assembly.</p>
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Design Pillars</h2>
+                <p>A coherent scientific product vision across sequence design, modularity, and translational relevance.</p>
+            </div>
+            <div class="grid three-col">
+                <article class="card" data-reveal data-delay="1">
+                    <h3>Fold Logic</h3>
+                    <p>Encode structural behavior directly in sequence architecture to produce predictable nanoscale forms.</p>
                 </article>
-                <article class="card">
-                    <div class="stat">10+</div>
-                    <p>Iterative design cycles targeting stability and folding yield.</p>
+                <article class="card" data-reveal data-delay="2">
+                    <h3>Functional Modules</h3>
+                    <p>Attach sensing motifs, binders, and reporters without compromising structural integrity.</p>
                 </article>
-                <article class="card">
-                    <div class="stat">1</div>
-                    <p>Integrated platform connecting modeling, experiments, and stakeholders.</p>
+                <article class="card" data-reveal data-delay="3">
+                    <h3>Rapid Iteration</h3>
+                    <p>Use model-informed experiments to improve each generation with clear measurable criteria.</p>
                 </article>
             </div>
+        </section>
+
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Style & Motion Brief</h2>
+                <p>Quality bar for the full website redesign and animation consistency.</p>
+            </div>
+            <div class="grid two-col">
+                <article class="card">
+                    <h3>Visual Language</h3>
+                    <ul>
+                        <li><strong>Color hierarchy:</strong> deep space backgrounds, high-contrast text, cyan-violet accent signals.</li>
+                        <li><strong>Typography scale:</strong> compact readable body with bold, cinematic headline treatment.</li>
+                        <li><strong>Spatial rhythm:</strong> consistent vertical spacing and panelized content blocks.</li>
+                        <li><strong>Shape system:</strong> medium-large radii and soft borders for a modern lab interface look.</li>
+                        <li><strong>Shadow treatment:</strong> layered depth without heavy visual noise.</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Motion Tone</h3>
+                    <ul>
+                        <li><strong>Ambient:</strong> slow background drift to maintain energy without distraction.</li>
+                        <li><strong>Reveal:</strong> gentle scroll-based entrance for reading flow.</li>
+                        <li><strong>Micro-interaction:</strong> precise hover/focus responses on links, cards, and media.</li>
+                        <li><strong>Safety:</strong> reduced-motion users receive static, immediate content.</li>
+                        <li><strong>Performance:</strong> transforms/opacity prioritized over expensive animated properties.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Visual QA Acceptance Checklist</h2>
+                <p>Cross-page quality gates for consistency, motion, accessibility, and responsive polish.</p>
+            </div>
+            <ul class="checklist">
+                <li class="checklist-item">Typography, spacing, and component behavior remain consistent on all pages.</li>
+                <li class="checklist-item">Animations are subtle, coherent, and free of jank or overlap issues.</li>
+                <li class="checklist-item">Keyboard focus states and contrast remain visible across interactive elements.</li>
+                <li class="checklist-item">Reduced-motion mode disables non-essential animation and transitions.</li>
+                <li class="checklist-item">Mobile, tablet, and desktop layouts preserve readability and hierarchy.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 iGEM Aarhus. Licensed under CC BY 4.0.</p>
     </footer>
-
 </body>
 </html>

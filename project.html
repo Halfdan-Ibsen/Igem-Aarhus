@@ -3,54 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - Our iGEM Project</title>
+    <title>Project · iGEM Aarhus 2026</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <nav class="navbar">
-        <div class="logo">🧬 iGEM Aarhus 2026 · RNA Origami</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="human-practices.html">Human Practices</a></li>
-        </ul>
+        <div class="nav-inner">
+            <div class="logo">🧬 iGEM Aarhus 2026 · RNA Origami</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="human-practices.html">Human Practices</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main class="content-container">
-        <h1>Project Description</h1>
-        <p>Our RNA origami platform turns sequence design into programmable nanoscale geometry for real biological impact.</p>
+    <header class="page-header content-container" data-reveal>
+        <div class="badge">Project Blueprint</div>
+        <h1 class="hero-title">RNA origami as a programmable engineering platform.</h1>
+        <p>We structure the project into clear design stages so each iteration improves both folding reliability and functional output.</p>
+    </header>
 
-        <section class="project-section">
-            <h2>Background</h2>
-            <p>Current biomolecular tools often force a tradeoff between structure and function. RNA origami resolves this by building both into one strand: it self-folds into stable shapes while carrying aptamers, binding loops, and reporter motifs.</p>
+    <main class="content-container section-stack">
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Problem Framing</h2>
+                <p>Conventional biomolecular tools often separate structure from function, slowing prototyping and limiting modularity.</p>
+            </div>
+            <div class="grid two-col">
+                <article class="card">
+                    <h3>Current Gap</h3>
+                    <p>Many systems require multiple molecules or unstable assemblies, making behavior hard to predict and scale.</p>
+                </article>
+                <article class="card">
+                    <h3>Our Response</h3>
+                    <p>We encode shape and activity in one RNA strand that self-folds and hosts functional motifs at defined locations.</p>
+                </article>
+            </div>
         </section>
 
-        <section class="project-section">
-            <h2>Our Design Stack</h2>
-            <ul>
-                <li><strong>In silico design:</strong> multi-objective sequence optimization for folding, accessibility, and motif placement.</li>
-                <li><strong>Build:</strong> DNA templates for transcription and expression constructs for intracellular production.</li>
-                <li><strong>Test:</strong> fluorescence and gel-based characterization to verify structural behavior.</li>
-                <li><strong>Learn:</strong> model updates from experimental data to improve each generation.</li>
-            </ul>
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Design-to-Learn Pipeline</h2>
+                <p>A scannable engineering workflow with measurable checkpoints at every stage.</p>
+            </div>
+            <div class="grid two-col">
+                <article class="card" data-reveal data-delay="1">
+                    <h3>1. In Silico Design</h3>
+                    <p>Multi-objective sequence optimization for fold stability, motif accessibility, and predictable geometry.</p>
+                </article>
+                <article class="card" data-reveal data-delay="2">
+                    <h3>2. Build</h3>
+                    <p>DNA template generation and expression construct preparation for robust RNA production.</p>
+                </article>
+                <article class="card" data-reveal data-delay="1">
+                    <h3>3. Test</h3>
+                    <p>Fluorescence and gel-based characterization to validate structure, yield, and behavior.</p>
+                </article>
+                <article class="card" data-reveal data-delay="2">
+                    <h3>4. Learn</h3>
+                    <p>Experimental feedback updates design parameters for stronger next-generation scaffold candidates.</p>
+                </article>
+            </div>
         </section>
 
-        <section class="project-section">
-            <h2>Expected Outcomes</h2>
-            <p>We aim to demonstrate reliable RNA origami folding with measurable functional output and clear design rules for portability. Success means future teams can rapidly repurpose our scaffold framework for diagnostics, molecular computing, and smart therapeutics.</p>
-        </section>
-
-        <section class="project-section">
-            <h2>Vision</h2>
-            <p>Long-term, we want RNA origami to be a core synthetic biology design language—where biological function is not just encoded, but architected.</p>
+        <section class="panel" data-reveal>
+            <div class="section-heading">
+                <h2>Expected Outcomes</h2>
+                <p>Deliver reproducible design rules and a reusable scaffold framework for future iGEM teams and broader RNA engineering applications.</p>
+            </div>
+            <div class="grid three-col">
+                <article class="card">
+                    <div class="stat">Reliable</div>
+                    <p>Demonstrated folding consistency across selected scaffold families.</p>
+                </article>
+                <article class="card">
+                    <div class="stat">Modular</div>
+                    <p>Interchangeable motif placements with retained structural behavior.</p>
+                </article>
+                <article class="card">
+                    <div class="stat">Portable</div>
+                    <p>A pipeline that can be reused for diagnostics, computing, and therapeutic concepts.</p>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 iGEM Aarhus. Licensed under CC BY 4.0.</p>
     </footer>
-
 </body>
 </html>
