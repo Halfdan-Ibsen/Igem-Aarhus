@@ -1,89 +1,179 @@
-/* --- GLOBAL STYLES --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+:root {
+    --bg-dark: #090b17;
+    --bg-mid: #11162d;
+    --panel: rgba(255, 255, 255, 0.07);
+    --panel-border: rgba(255, 255, 255, 0.18);
+    --text: #e8ecff;
+    --muted: #b7c2ff;
+    --accent: #6af0ff;
+    --accent-2: #9e7dff;
+    --accent-3: #4dffb8;
 }
 
-/* --- NAVIGATION BAR --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 8% 10%, rgba(106, 240, 255, 0.22) 0, transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(158, 125, 255, 0.2) 0, transparent 34%),
+        linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+    min-height: 100vh;
+}
+
 .navbar {
-    background-color: #2c3e50;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 16px 28px;
     position: sticky;
-    top: 0; /* Keeps the nav at the top while scrolling */
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    background: rgba(9, 11, 23, 0.78);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .navbar .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 18px;
     margin: 0;
     padding: 0;
 }
 
-.nav-links li {
-    margin-left: 20px;
-}
-
 .nav-links a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 600;
+    opacity: 0.9;
 }
 
 .nav-links a:hover {
-    color: #18bc9c; /* iGEM green highlight */
+    color: var(--accent);
 }
 
-/* --- HERO SECTION (Banner) --- */
 .hero-section {
-    background-color: #18bc9c;
-    color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 88px 20px 60px;
 }
 
 .hero-section h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 4.8vw, 3.8rem);
+    line-height: 1.1;
 }
 
-/* --- MAIN CONTENT --- */
+.hero-section p {
+    margin: 0 auto;
+    max-width: 760px;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(106, 240, 255, 0.14);
+    border: 1px solid rgba(106, 240, 255, 0.45);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.86rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
 .content-container {
-    max-width: 900px;
-    margin: 40px auto; /* Centers the content */
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto 40px;
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card,
+.project-section,
+.hp-section,
+.team-member,
+.project-summary,
+.achievements {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
 }
 
 h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #18bc9c;
-    padding-bottom: 5px;
+    color: var(--accent);
+    margin-bottom: 10px;
 }
 
-p {
-    line-height: 1.6;
+p, li, blockquote {
+    line-height: 1.7;
+    color: var(--muted);
 }
 
-/* --- FOOTER --- */
+ul {
+    padding-left: 1.1rem;
+}
+
+blockquote {
+    margin: 14px 0 0;
+    padding: 14px 16px;
+    border-left: 4px solid var(--accent-2);
+    background: rgba(158, 125, 255, 0.12);
+    border-radius: 8px;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 16px;
+}
+
+.stat {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 40px;
+    padding: 24px;
+    color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+    }
 }
