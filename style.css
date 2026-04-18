@@ -126,10 +126,16 @@ body::after {
     margin: 0 0 12px;
     font-size: clamp(2rem, 4.8vw, 3.8rem);
     line-height: 1.1;
-    background: linear-gradient(120deg, #ffffff, #cde8ff 45%, #b6a0ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #ffffff;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .hero-section h1 {
+        background: linear-gradient(120deg, #ffffff, #cde8ff 45%, #b6a0ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 }
 
 .hero-section p {
@@ -302,11 +308,28 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    body,
+    body::before,
+    body::after,
+    .hero-section,
+    .card,
+    .project-section,
+    .hp-section,
+    .team-member,
+    .project-summary,
+    .achievements {
         animation: none !important;
+    }
+
+    .hero-image,
+    .card,
+    .project-section,
+    .hp-section,
+    .team-member,
+    .project-summary,
+    .achievements,
+    .nav-links a,
+    .nav-links a::after {
         transition: none !important;
-        scroll-behavior: auto !important;
     }
 }
